@@ -3,7 +3,7 @@
 This repo has been create to reproduce a bug in the way Rasa 2 handles stories.
 
 ## The problem:
-It is actually difficult to say what is happening here. It appears that Rasa 2.0.x is not able to predict the correct actions when the events before a story are different, where Rasa 1.10.x makes correct predictions.
+It is actually difficult to say what is happening here. It appears that Rasa 2.0.x is not able to predict the correct actions when events in the current conversation do not match the previous events in a story, where Rasa 1.10.x makes correct predictions.
 
 This repo demonstrates two instances of this.
 - In the first case, circling back to a certain point in a story (demonstrated in the first test) ends in Rasa 2.0.x falling back, while Rasa 1.10.x correctly follows the same path as before.
