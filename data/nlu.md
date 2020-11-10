@@ -9,12 +9,6 @@
 - Hello
 - heya
 
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-
 ## intent:affirm
 - yes
 - indeed
@@ -38,21 +32,6 @@
 - nope
 - negative
 - none of those
-
-## intent:request_human
-- please can I speak to a human
-- I want a human
-- Give me a person
-- Please hand me over to a person
-- I want to speak to a person
-
-## intent:thanks
-- thanks
-- thank you
-- great, thanks
-- wow thanks
-- thx
-- thnx
 
 ## intent:inform_address
 - [23](number) flower street, Leeds
@@ -113,18 +92,6 @@
 - [sharon@smith.co.za](email)
 - my email is [streetwise+323@432.53.co.za](email)
 - [32mike432@385.8.32.ru](email)
-
-## intent:out_of_scope
-- Please send me my latest invoice
-- I have a complaint
-- How much does your service cost?
-- Where do you deliver to?
-
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
 
 ## regex:email
 - ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
