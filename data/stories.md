@@ -36,7 +36,7 @@
 * affirm
     - utter_track_shipment
 
-## Create email no setup
+## Ship and don't track want something else
 * greet
     - utter_greet
     - user_details_form
