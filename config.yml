@@ -20,10 +20,7 @@ policies:
   epochs: 100
 - name: MappingPolicy
 - name: FormPolicy
-- name: TwoStageFallbackPolicy
+- name: "FallbackPolicy"
   nlu_threshold: 0.6
-  core_threshold: 0.6
-  ambiguity_threshold: 0.10
-  fallback_core_action_name: "action_default_fallback"
-  fallback_nlu_action_name: "action_default_fallback"
-  deny_suggestion_intent_name: "out_of_scope"
+  core_threshold: 0.4
+  fallback_action_name: "action_default_fallback"
