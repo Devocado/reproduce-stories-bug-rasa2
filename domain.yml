@@ -1,0 +1,90 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- thanks
+- track_shipment
+- create_shipment
+- inform_email
+- inform_address
+- inform_number_items
+- request_human
+- bot_challenge
+- out_of_scope
+
+entities:
+- email
+- number
+
+slots:
+  client_name:
+    type: unfeaturized
+  client_email:
+    type: unfeaturized
+  number_items:
+    type: float
+  from_address:
+    type: unfeaturized
+  to_address:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+
+responses:
+  utter_ask_client_name:
+  - text: "Please enter your name:"
+  utter_ask_client_email:
+  - text: "Please enter your email address"
+  utter_confirm_user_details:
+  - text: Thank you {client_name}, I have your email address as {client_email}.
+  utter_ask_number_items:
+  - text: How many items do you want to ship?
+  utter_ask_from_address:
+  - text: What is the address where your shipment will be picked up?
+  utter_ask_to_address:
+  - text: What is the address where your shipoment will be delivered?
+  utter_greet:
+  - text: Hello, I am talkbot.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_my_pleasure:
+  - text: My pleasure. I'm glad I could help
+  - text: That's a pleasure. Always glad to help
+  utter_track_shipment:
+  - text: "You can track your shipment in real time here: https://www.example.com"
+  utter_how_can_help:
+  - text: Would you like to make a shipment, or would you like to track a shipment?
+  utter_confirm_shipping_details:
+  - text: Right, your shipment will be picked up at {from_address} and will be delivered to {to_address}
+  utter_track_new_shipment:
+  - text: Would you like to track your shipment?
+  utter_ask_rephrase:
+  - text: Sorry, I didn't get you. Could you rephrase?
+  utter_anything_else:
+  - text: Is there something else I can help you with?
+  utter_human_handoff:
+  - text: Okay, I'll transfer you to a human.
+  utter_fallback:
+  - text: We seem to be stuck. I'll transfer you to a human
+  utter_okay:
+  - text: Okay
+  utter_out_of_scope:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: I'm sorry I can't help you with that. Would you like to speak with a human?
+
+actions:
+- action_faq_search
+- action_default_fallback
+
+forms:
+- user_details_form
+- create_shipment_form

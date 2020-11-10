@@ -1,0 +1,11 @@
+__pycache__/
+*2.md
+*2.yml
+models/
+results/
+events.db*
+rasa.db*
+*.log
+.python-version
+story_graph.dot
+.vscode/
